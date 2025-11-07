@@ -73,10 +73,10 @@ const Dashboard = () => {
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="space-y-3">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-700 to-gray-600 bg-clip-text text-transparent">
             Cortex Command Center
           </h1>
-          <p className="text-zinc-400 text-lg">
+          <p className="text-gray-600 text-lg">
             AI-powered insights connecting product actions to revenue impact
           </p>
         </div>
