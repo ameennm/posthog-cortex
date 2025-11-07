@@ -7,11 +7,9 @@ import {
   TrendingUp, 
   TrendingDown, 
   Bug, 
-  Sparkles, 
   Users, 
   DollarSign, 
   AlertTriangle,
-  ChevronRight,
   Target,
   ArrowRight
 } from 'lucide-react';
