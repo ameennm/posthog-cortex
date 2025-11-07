@@ -35,41 +35,6 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      {/* Navbar */}
-      <nav className="border-b border-gray-200 bg-white/95 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-8">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-[#F9BD2B] to-[#FFA500] rounded-lg flex items-center justify-center font-bold text-black">
-                  P
-                </div>
-                <span className="text-xl font-bold text-gray-900">PostHog</span>
-                <div className="h-6 w-px bg-gray-300 mx-2"></div>
-                <div className="flex items-center space-x-2">
-                  <Sparkles className="w-5 h-5 text-[#F9BD2B]" />
-                  <span className="text-lg font-semibold text-[#F9BD2B]">Cortex Engine</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-6">
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Dashboard
-              </Button>
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Revenue
-              </Button>
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Costs
-              </Button>
-              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Funnels
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="space-y-3">
