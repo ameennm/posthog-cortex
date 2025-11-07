@@ -85,18 +85,18 @@ const Dashboard = () => {
       {/* Section 1: AI-Powered Insights */}
       <section className="max-w-7xl mx-auto px-6 py-8">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2">Top 3 Insights This Week</h2>
-          <p className="text-zinc-500">Critical intelligence from Cortex AI analysis</p>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Top 3 Insights This Week</h2>
+          <p className="text-gray-600">Critical intelligence from Cortex AI analysis</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {mockData.cortexInsights.map((insight) => (
             <Card
               key={insight.id}
-              className={`bg-zinc-900/50 border-2 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${
+              className={`bg-white border-2 cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl ${
                 insight.sentiment === 'positive' 
-                  ? 'border-emerald-500/30 hover:border-emerald-500/60' 
-                  : 'border-red-500/30 hover:border-red-500/60'
+                  ? 'border-emerald-500/40 hover:border-emerald-500/70' 
+                  : 'border-red-500/40 hover:border-red-500/70'
               } ${selectedInsight === insight.id ? 'ring-2 ring-[#F9BD2B]' : ''}`}
               onClick={() => setSelectedInsight(insight.id)}
             >
@@ -105,24 +105,24 @@ const Dashboard = () => {
                   <Badge 
                     className={`${
                       insight.sentiment === 'positive'
-                        ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-                        : 'bg-red-500/20 text-red-400 border-red-500/30'
+                        ? 'bg-emerald-100 text-emerald-700 border-emerald-300'
+                        : 'bg-red-100 text-red-700 border-red-300'
                     } border`}
                   >
                     {insight.type}
                   </Badge>
                   {insight.sentiment === 'positive' ? (
-                    <TrendingUp className="w-6 h-6 text-emerald-400" />
+                    <TrendingUp className="w-6 h-6 text-emerald-600" />
                   ) : (
-                    <TrendingDown className="w-6 h-6 text-red-400" />
+                    <TrendingDown className="w-6 h-6 text-red-600" />
                   )}
                 </div>
-                <CardTitle className="text-xl leading-snug">
+                <CardTitle className="text-xl leading-snug text-gray-900">
                   {insight.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-zinc-400 leading-relaxed">
+                <CardDescription className="text-gray-600 leading-relaxed">
                   {insight.description}
                 </CardDescription>
               </CardContent>
