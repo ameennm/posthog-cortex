@@ -134,20 +134,20 @@ const Dashboard = () => {
       {/* Section 2: Revenue & Cost Dashboard */}
       <section className="max-w-7xl mx-auto px-6 py-12">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2">Revenue & Cost Dashboard</h2>
-          <p className="text-zinc-500">Track feature performance and bug impact</p>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Revenue & Cost Dashboard</h2>
+          <p className="text-gray-600">Track feature performance and bug impact</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Column 1: Revenue Per Feature */}
-          <Card className="bg-zinc-900/50 border-zinc-800">
+          <Card className="bg-white border-gray-200 shadow-lg">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                    <DollarSign className="w-5 h-5 text-emerald-400" />
+                  <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
+                    <DollarSign className="w-5 h-5 text-emerald-600" />
                   </div>
-                  <CardTitle className="text-2xl">Feature Revenue Influence</CardTitle>
+                  <CardTitle className="text-2xl text-gray-900">Feature Revenue Influence</CardTitle>
                 </div>
               </div>
               <div className="flex space-x-2 mt-4">
@@ -155,7 +155,7 @@ const Dashboard = () => {
                   size="sm"
                   variant={sortBy === 'revenue' ? 'default' : 'outline'}
                   onClick={() => setSortBy('revenue')}
-                  className={sortBy === 'revenue' ? 'bg-[#F9BD2B] text-black hover:bg-[#FFA500]' : ''}
+                  className={sortBy === 'revenue' ? 'bg-[#F9BD2B] text-black hover:bg-[#FFA500]' : 'text-gray-700 border-gray-300 hover:bg-gray-50'}
                 >
                   Revenue
                 </Button>
@@ -163,7 +163,7 @@ const Dashboard = () => {
                   size="sm"
                   variant={sortBy === 'usage' ? 'default' : 'outline'}
                   onClick={() => setSortBy('usage')}
-                  className={sortBy === 'usage' ? 'bg-[#F9BD2B] text-black hover:bg-[#FFA500]' : ''}
+                  className={sortBy === 'usage' ? 'bg-[#F9BD2B] text-black hover:bg-[#FFA500]' : 'text-gray-700 border-gray-300 hover:bg-gray-50'}
                 >
                   Usage
                 </Button>
@@ -171,7 +171,7 @@ const Dashboard = () => {
                   size="sm"
                   variant={sortBy === 'bugs' ? 'default' : 'outline'}
                   onClick={() => setSortBy('bugs')}
-                  className={sortBy === 'bugs' ? 'bg-[#F9BD2B] text-black hover:bg-[#FFA500]' : ''}
+                  className={sortBy === 'bugs' ? 'bg-[#F9BD2B] text-black hover:bg-[#FFA500]' : 'text-gray-700 border-gray-300 hover:bg-gray-50'}
                 >
                   Bugs
                 </Button>
@@ -182,19 +182,19 @@ const Dashboard = () => {
                 {sortedFeatures.map((feature, index) => (
                   <div
                     key={feature.id}
-                    className="p-4 bg-zinc-800/50 rounded-lg border border-zinc-700 hover:border-[#F9BD2B]/50 transition-all duration-300 cursor-pointer group"
+                    className="p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-[#F9BD2B]/50 transition-all duration-300 cursor-pointer group hover:shadow-md"
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-2">
-                          <span className="text-lg font-semibold">{feature.featureName}</span>
+                          <span className="text-lg font-semibold text-gray-900">{feature.featureName}</span>
                           {index === 0 && (
                             <Badge className="bg-[#F9BD2B]/20 text-[#F9BD2B] border-[#F9BD2B]/30 border">
                               Top Performer
                             </Badge>
                           )}
                         </div>
-                        <div className="flex items-center space-x-6 text-sm text-zinc-400">
+                        <div className="flex items-center space-x-6 text-sm text-gray-600">
                           <div className="flex items-center space-x-2">
                             <Users className="w-4 h-4" />
                             <span>{feature.monthlyUsage}</span>
@@ -206,10 +206,10 @@ const Dashboard = () => {
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-emerald-400">
+                        <div className="text-2xl font-bold text-emerald-600">
                           {feature.revenueInfluenced}
                         </div>
-                        <div className="text-xs text-zinc-500">influenced</div>
+                        <div className="text-xs text-gray-500">influenced</div>
                       </div>
                     </div>
                   </div>
