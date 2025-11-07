@@ -272,44 +272,44 @@ const Dashboard = () => {
       {/* Section 3: Marketing Funnel */}
       <section className="max-w-7xl mx-auto px-6 py-12 pb-20">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-2">Marketing Funnel Attribution</h2>
-          <p className="text-zinc-500">Ad-Spend-to-LTV Funnel: 'Google-AI' Campaign</p>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Marketing Funnel Attribution</h2>
+          <p className="text-gray-600">Ad-Spend-to-LTV Funnel: 'Google-AI' Campaign</p>
         </div>
 
-        <Card className="bg-zinc-900/50 border-zinc-800">
+        <Card className="bg-white border-gray-200 shadow-lg">
           <CardContent className="pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-4">
               {mockData.adFunnel.map((step, index) => (
                 <React.Fragment key={index}>
                   <div className="flex-1 w-full">
-                    <div className="bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 border border-zinc-700 rounded-xl p-6 text-center hover:border-[#F9BD2B]/50 transition-all duration-300 group cursor-pointer">
+                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-xl p-6 text-center hover:border-[#F9BD2B]/50 transition-all duration-300 group cursor-pointer hover:shadow-lg">
                       <div className="mb-4">
                         <div className="w-12 h-12 bg-[#F9BD2B]/20 rounded-full flex items-center justify-center mx-auto group-hover:bg-[#F9BD2B]/30 transition-colors">
                           <span className="text-[#F9BD2B] font-bold text-lg">{index + 1}</span>
                         </div>
                       </div>
-                      <h3 className="text-sm font-medium text-zinc-400 mb-3">{step.stage}</h3>
-                      <p className="text-2xl font-bold text-white">{step.value}</p>
+                      <h3 className="text-sm font-medium text-gray-600 mb-3">{step.stage}</h3>
+                      <p className="text-2xl font-bold text-gray-900">{step.value}</p>
                     </div>
                   </div>
                   {index < mockData.adFunnel.length - 1 && (
                     <div className="hidden md:block">
-                      <ArrowRight className="w-6 h-6 text-zinc-600" />
+                      <ArrowRight className="w-6 h-6 text-gray-400" />
                     </div>
                   )}
                 </React.Fragment>
               ))}
             </div>
             
-            <div className="mt-8 p-6 bg-emerald-950/20 border border-emerald-500/30 rounded-xl">
+            <div className="mt-8 p-6 bg-emerald-50 border border-emerald-300 rounded-xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <TrendingUp className="w-6 h-6 text-emerald-400" />
-                  <span className="text-lg font-semibold">Campaign Performance</span>
+                  <TrendingUp className="w-6 h-6 text-emerald-600" />
+                  <span className="text-lg font-semibold text-gray-900">Campaign Performance</span>
                 </div>
                 <div className="text-right">
-                  <div className="text-3xl font-bold text-emerald-400">3:1</div>
-                  <div className="text-sm text-zinc-400">LTV:CAC Ratio</div>
+                  <div className="text-3xl font-bold text-emerald-600">3:1</div>
+                  <div className="text-sm text-gray-600">LTV:CAC Ratio</div>
                 </div>
               </div>
             </div>
