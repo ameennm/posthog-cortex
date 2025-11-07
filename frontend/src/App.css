@@ -50,14 +50,14 @@ button:active {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #f9fafb;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #d1d5db;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #9ca3af;
 }
