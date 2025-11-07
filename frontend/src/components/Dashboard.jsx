@@ -34,9 +34,9 @@ const Dashboard = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A] text-white">
+    <div className="min-h-screen bg-white text-gray-900">
       {/* Navbar */}
-      <nav className="border-b border-zinc-800 bg-black/50 backdrop-blur-xl sticky top-0 z-50">
+      <nav className="border-b border-gray-200 bg-white/95 backdrop-blur-xl sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
@@ -44,8 +44,8 @@ const Dashboard = () => {
                 <div className="w-8 h-8 bg-gradient-to-br from-[#F9BD2B] to-[#FFA500] rounded-lg flex items-center justify-center font-bold text-black">
                   P
                 </div>
-                <span className="text-xl font-bold">PostHog</span>
-                <div className="h-6 w-px bg-zinc-700 mx-2"></div>
+                <span className="text-xl font-bold text-gray-900">PostHog</span>
+                <div className="h-6 w-px bg-gray-300 mx-2"></div>
                 <div className="flex items-center space-x-2">
                   <Sparkles className="w-5 h-5 text-[#F9BD2B]" />
                   <span className="text-lg font-semibold text-[#F9BD2B]">Cortex Engine</span>
@@ -53,16 +53,16 @@ const Dashboard = () => {
               </div>
             </div>
             <div className="flex items-center space-x-6">
-              <Button variant="ghost" className="text-zinc-400 hover:text-white transition-colors">
+              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Dashboard
               </Button>
-              <Button variant="ghost" className="text-zinc-400 hover:text-white transition-colors">
+              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Revenue
               </Button>
-              <Button variant="ghost" className="text-zinc-400 hover:text-white transition-colors">
+              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Costs
               </Button>
-              <Button variant="ghost" className="text-zinc-400 hover:text-white transition-colors">
+              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 transition-colors">
                 Funnels
               </Button>
             </div>
