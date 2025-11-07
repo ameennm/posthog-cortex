@@ -219,20 +219,20 @@ const Dashboard = () => {
           </Card>
 
           {/* Column 2: Bug Watchlist */}
-          <Card className="bg-zinc-900/50 border-zinc-800">
+          <Card className="bg-white border-gray-200 shadow-lg">
             <CardHeader>
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
-                  <AlertTriangle className="w-5 h-5 text-red-400" />
+                <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
+                  <AlertTriangle className="w-5 h-5 text-red-600" />
                 </div>
-                <CardTitle className="text-2xl">Most Expensive Bugs</CardTitle>
+                <CardTitle className="text-2xl text-gray-900">Most Expensive Bugs</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-4">
               {mockData.bugWatchlist.map((bug) => (
                 <Card
                   key={bug.id}
-                  className={`bg-red-950/20 border-2 border-red-500/30 cursor-pointer transition-all duration-300 hover:border-red-500/60 hover:shadow-lg hover:shadow-red-500/10 ${
+                  className={`bg-red-50/50 border-2 border-red-300/50 cursor-pointer transition-all duration-300 hover:border-red-400/70 hover:shadow-lg hover:shadow-red-100 ${
                     selectedBug === bug.id ? 'ring-2 ring-[#F9BD2B]' : ''
                   }`}
                   onClick={() => setSelectedBug(bug.id)}
@@ -241,15 +241,15 @@ const Dashboard = () => {
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-2">
-                          <CardTitle className="text-xl">{bug.bugName}</CardTitle>
-                          <Badge className="bg-red-500/20 text-red-400 border-red-500/30 border">
+                          <CardTitle className="text-xl text-gray-900">{bug.bugName}</CardTitle>
+                          <Badge className="bg-red-100 text-red-700 border-red-300 border">
                             {bug.status}
                           </Badge>
                         </div>
-                        <div className="text-4xl font-bold text-red-400 my-3">
+                        <div className="text-4xl font-bold text-red-600 my-3">
                           {bug.monthlyCost}
                         </div>
-                        <div className="space-y-1 text-sm text-zinc-400">
+                        <div className="space-y-1 text-sm text-gray-600">
                           <div className="flex items-center space-x-2">
                             <Users className="w-4 h-4" />
                             <span>{bug.affectedUsers} affected users</span>
